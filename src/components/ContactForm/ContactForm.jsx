@@ -19,8 +19,8 @@ const validationSchema=Yup.object().shape({
   number:Yup.string().min(3,"Too Short!").max(50, "Too Long!").required("Required")
 });
 
-const handleSubmit=(values,{resetForm})=>{
-  dispatch(addContact({id,...values}));
+const handleSubmit = (values, { resetForm }) => {
+  dispatch(addContact(values));
   resetForm();
 }
 
